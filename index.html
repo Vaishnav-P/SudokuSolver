@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sudoku Solver</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div class="container">
+      <div class="heading">
+        <h1>Sudoku Solver</h1>
+      </div>
+      <div class="wrapper">
+        <div class="input-row">
+          <input
+            type="number"
+            name="input1"
+            id="input1"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input2"
+            id="input2"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input3"
+            id="input3"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input4"
+            id="input4"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input5"
+            id="input5"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input6"
+            id="input6"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input7"
+            id="input7"
+            style="background-color: #63d471"
+          />
+          <input
+            type="number"
+            name="input8"
+            id="input8"
+            style="background-color: #63d471"
+          />
+          <input
+            type="number"
+            name="input9"
+            id="input9"
+            style="background-color: #63d471"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input10"
+            id="input10"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input11"
+            id="input11"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input12"
+            id="input12"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input13"
+            id="input13"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input14"
+            id="input14"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input15"
+            id="input15"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input16"
+            id="input16"
+            style="background-color: #63d471"
+          />
+          <input
+            type="number"
+            name="input17"
+            id="input17"
+            style="background-color: #63d471"
+          />
+          <input
+            type="number"
+            name="input18"
+            id="input18"
+            style="background-color: #63d471"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input19"
+            id="input19"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input20"
+            id="input20"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input21"
+            id="input21"
+            style="background-color: #ad343e"
+          />
+          <input
+            type="number"
+            name="input22"
+            id="input22"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input23"
+            id="input23"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input24"
+            id="input24"
+            style="background-color: #0e6ba8"
+          />
+          <input
+            type="number"
+            name="input25"
+            id="input25"
+            style="background-color: #63d471"
+          />
+          <input
+            type="number"
+            name="input26"
+            id="input26"
+            style="background-color: #63d471"
+          />
+          <input
+            type="number"
+            name="input27"
+            id="input27"
+            style="background-color: #63d471"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input28"
+            id="input28"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input29"
+            id="input29"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input30"
+            id="input30"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input31"
+            id="input31"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input32"
+            id="input32"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input33"
+            id="input33"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input34"
+            id="input34"
+            style="background-color: #f17105"
+          />
+          <input
+            type="number"
+            name="input35"
+            id="input35"
+            style="background-color: #f17105"
+          />
+          <input
+            type="number"
+            name="input36"
+            id="input36"
+            style="background-color: #f17105"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input37"
+            id="input37"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input38"
+            id="input38"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input39"
+            id="input39"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input40"
+            id="input40"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input41"
+            id="input41"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input42"
+            id="input42"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input43"
+            id="input43"
+            style="background-color: #f17105"
+          />
+          <input
+            type="number"
+            name="input44"
+            id="input44"
+            style="background-color: #f17105"
+          />
+          <input
+            type="number"
+            name="input45"
+            id="input45"
+            style="background-color: #f17105"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input46"
+            id="input46"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input47"
+            id="input47"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input48"
+            id="input48"
+            style="background-color: #ecd444"
+          />
+          <input
+            type="number"
+            name="input4"
+            id="input49"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input5"
+            id="input50"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input6"
+            id="input51"
+            style="background-color: #6610f2"
+          />
+          <input
+            type="number"
+            name="input7"
+            id="input52"
+            style="background-color: #f17105"
+          />
+          <input
+            type="number"
+            name="input8"
+            id="input53"
+            style="background-color: #f17105"
+          />
+          <input
+            type="number"
+            name="input9"
+            id="input54"
+            style="background-color: #f17105"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input1"
+            id="input55"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input2"
+            id="input56"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input3"
+            id="input57"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input4"
+            id="input58"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input5"
+            id="input59"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input6"
+            id="input60"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input7"
+            id="input61"
+            style="background-color: #e63946"
+          />
+          <input
+            type="number"
+            name="input8"
+            id="input62"
+            style="background-color: #e63946"
+          />
+          <input
+            type="number"
+            name="input9"
+            id="input63"
+            style="background-color: #e63946"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input1"
+            id="input64"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input2"
+            id="input65"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input3"
+            id="input66"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input4"
+            id="input67"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input5"
+            id="input68"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input6"
+            id="input69"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input7"
+            id="input70"
+            style="background-color: #e63946"
+          />
+          <input
+            type="number"
+            name="input8"
+            id="input71"
+            style="background-color: #e63946"
+          />
+          <input
+            type="number"
+            name="input9"
+            id="input72"
+            style="background-color: #e63946"
+          />
+        </div>
+        <div class="input-row">
+          <input
+            type="number"
+            name="input1"
+            id="input73"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input2"
+            id="input74"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input3"
+            id="input75"
+            style="background-color: #9ed8db"
+          />
+          <input
+            type="number"
+            name="input4"
+            id="input76"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input5"
+            id="input77"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input6"
+            id="input78"
+            style="background-color: #d2ff28"
+          />
+          <input
+            type="number"
+            name="input7"
+            id="input79"
+            style="background-color: #e63946"
+          />
+          <input
+            type="number"
+            name="input8"
+            id="input80"
+            style="background-color: #e63946"
+          />
+          <input
+            type="number"
+            name="input9"
+            id="input81"
+            style="background-color: #e63946"
+          />
+        </div>
+      </div>
+      <div class="solve-btn">
+        <button onclick="getMatrix()">Solve</button>
+      </div>
+    </div>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
